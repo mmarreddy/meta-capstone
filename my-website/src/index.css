@@ -1,18 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'karla';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.header-container{
-  display: flex; 
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 200px;
-}
 img{
   padding-top:10px;
   padding-left: 20px;
@@ -35,15 +30,118 @@ img{
 }
 
 .main{
+  padding: 10px 0px 40px 0px;
+} 
+
+
+h1{
+  font-family: 'Markazi Text';
+  font-size: 60px;
+  margin: 0;
+  padding:0;
+}
+
+h2{
+  font-family: 'Markazi Text';
+  font-size: 36px;
+  margin-top: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+p{
+  font-family: 'karla';
+  font-size: 14px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+h3{
+  font-family: 'karla';
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header-container{
+  display: flex; 
+  justify-content: center;
+  gap: 5%;
+} 
+#mainImg{
+  width: 200px;
+  border-radius: 10%;
+}
+
+.main-section{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
   background-color:#495E57;
-  padding: 300px;
+  padding: 20px;
+  gap: 15%
+
+}
+.main-item {
+  display: flex;
+  flex-direction: column; 
+  flex: 0 1 auto;
+}
+
+.card-section {
+  padding: 50px 0px 30px 0;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.card-container{
+  display: flex;
+  gap: 3%;
+  justify-content: center;
+}
+
+.card{
+  background-color: #edefee;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  margin-top: 2px;
+}
+.card img{
+  max-width: 100%; 
+  padding:0%
+}
+
+.card h3:nth-child(2){
+  color: #ee9972;
+}
+
+.card p{
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000000;
+  margin: 10px;
 }
 
 .footer{
   text-align: center;
+  padding: 20px; 
+  text-align: center; 
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:'karla';
 }
