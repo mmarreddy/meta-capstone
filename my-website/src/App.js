@@ -1,18 +1,14 @@
 import './App.css';
+//import Home from './Home';
+import Reservation from './components/Reservation';
 import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import "./index.css"
-//import Button from './components/Button';
-
 function App() {
   return (
-    <>
+    <div>
       <Header/>
-      <Main/>
-      <Footer/>
-
-    </>
+    {/* <Home/> */}
+    <Reservation/>
+  </div>
   );
 }
 
