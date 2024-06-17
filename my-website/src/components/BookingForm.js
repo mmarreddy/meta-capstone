@@ -1,32 +1,35 @@
 import React from 'react'
 import Button from './Button';
+import { useState } from 'react';
 
-function BookingForm(props) {
-    return (
-        <form style={{display: "grid", maxWidth: "200px", gap: "20px"}}>
+function BookingForm({availableTimes, dispatch}) {
+    
+        //state management
+        const [date, setDate] = useState('');
+        const [time, setTime] = useState('');
+        const [guests, setGuests] = useState('');
+        const [seating, setSeating] = useState('Patio');
+        const [occasion, setOccasion] = useState('None');
+       
+
+        return (
+        <form className="" style={{display: "grid", maxWidth: "200px", gap: "20px", justifyContent:"center"}}>
         <label htmlFor="res-date">Choose date</label>
-        <input type="date" id="res-date" required/>
+        <input type="date" id="res-date" value={date} onChange={(e) => setDate(e.target.value)} required/>
         <label htmlFor="res-time">Choose time</label>
-        <input type="time" id="res-time" required/>
-        {/* <select id="res-time ">
-           <option>5:30 PM</option>
-           <option>6:00 PM</option>
-           <option>7:00 PM</option>
-           <option>7:30 PM</option>
-           <option>8:00 PM</option>
-           <option>8:45 PM</option>
-        </select> */}
+        <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}required>
+           {availableTimes}
+        </select>
         <label htmlFor="guests">Number of guests</label>
-        <input type="number" placeholder="1" min="1" max="10" id="guests" required/>
+        <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={(e) => setGuests(e.target.value)}required/>
         <label htmlFor="seating">Seating Preference</label>
-            <input type="radio" id="patio" name="seating" value="HTML"/>
-            <label htmlFor="patio">Patio</label><br/>
-            <input type="radio" id="bakery" name="seating" value="Bakery"/>
-            <label htmlFor="bakery">Bakery</label><br/>
-            <input type="radio" id="Indoor" name="seating" value="Indoor"/>
-            <label htmlFor="Indoor">Indoor</label>
+        <select id="seating" value={seating} onChange={(e)=> setSeating(e.target.value)}>
+                <option value="Patio">Patio</option>
+                <option value="Bakery">Bakery</option>
+                <option value="Indoor">Indoor</option>
+            </select>
         <label htmlFor="occasion">Occasion</label>
-        <select id="occasion">
+        <select id="occasion" value={occasion} onChange={(e)=> setOccasion(e.target.value)}>
            <option>Birthday</option>
            <option>Anniversary</option>
            <option>None</option>
@@ -35,4 +38,7 @@ function BookingForm(props) {
      </form>
     );
   }
+
+
+  
   export default BookingForm;
