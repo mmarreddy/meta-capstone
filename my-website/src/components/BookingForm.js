@@ -14,11 +14,17 @@ function BookingForm({availableTimes, dispatch}) {
 
         return (
         <form className="" style={{display: "grid", maxWidth: "200px", gap: "20px", justifyContent:"center"}}>
+         <h1>Book A Reservation with Us!</h1>
         <label htmlFor="res-date">Choose date</label>
-        <input type="date" id="res-date" value={date} onChange={(e) => setDate(e.target.value)} required/>
+        <input type="date" id="res-date" value={date} onChange={(e) => {
+         setDate(e.target.value); 
+         dispatch({type:"updateTimes"})
+        }} required/>
         <label htmlFor="res-time">Choose time</label>
         <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}required>
-           {availableTimes}
+         {availableTimes.map((times, index) => 
+         (<option key={index} value={times}>{times}</option>))
+         } 
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={(e) => setGuests(e.target.value)}required/>

@@ -1,32 +1,34 @@
 import React, { useReducer} from 'react'
 import BookingForm from './BookingForm';
 
-function updateTimes(state, action) {
+function updateTimes(availableTimes, action, ) {
   switch (action.type) {
-    case 'UPDATE_TIMES':
+    case "updateTimes":
         // You can update the state here based on the action
         // For now, let's just return the initial times array
-        return action.times;
+        return availableTimes;
     default:
-        return state;
+        return availableTimes;
   }
 }
 
+const initializeTimes = (data) => {
+
+}
+
+const fetchData = () => {
+    fetch(`https://raw.githubusercontent.com/courseraap/capstone/main/api.js`) 
+      .then((response) => response.json()) 
+      .then((data) => initializeTimes(data)) 
+      .catch((error) => console.log(error)); 
+  };  
+
+  useEffect(() => { 
+    fetchData(); 
+  }, []); 
 
 function Reservation() {
-
-  const initializeTimes = () => {
-    return ([
-      "5:40 PM", 
-      '6:05 PM',
-      '7:00 PM',
-      '7:30 PM',
-      '8:00 PM',
-      '8:45 PM'
-    ])
-  }
-
-  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes)
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
 
     return (
       <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
