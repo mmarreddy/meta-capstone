@@ -13,6 +13,7 @@ function BookingForm({availableTimes, dispatch}) {
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone, setPhone] = useState('');
+        
         const handleSubmit  = (e) => {
          e.preventDefault();
         }

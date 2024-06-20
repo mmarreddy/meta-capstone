@@ -1,5 +1,5 @@
 import React, {useEffect, useReducer} from 'react'
-import BookingForm from './BookingForm';
+import BookingForm from '../components/BookingForm';
 
 
 function updateTimes(availableTimes, action, date) {

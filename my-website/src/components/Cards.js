@@ -1,7 +1,7 @@
 import React from 'react'
-import bruchetta from "./assets/bruchetta.svg";
-import gSalad from "./assets/greek salad.jpg"
-import lemonD from "./assets/lemon dessert.jpg"
+import bruchetta from "../assets/bruchetta.svg";
+import gSalad from "../assets/greek salad.jpg"
+import lemonD from "../assets/lemon dessert.jpg"
 
 const cardData =  [{
     title: "Greek Salad",

@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from './Cards'
 import Button from './Button'
-import dish from "./assets/restauranfood.jpg"
+import dish from "../assets/restauranfood.jpg"
 const Main = () => {
   return (
     <div className='main'>
