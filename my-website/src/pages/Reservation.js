@@ -1,6 +1,6 @@
 import React, {useEffect, useReducer} from 'react'
 import BookingForm from '../components/BookingForm';
-
+import './Reservation.css'
 
 function updateTimes(availableTimes, action, date) {
  switch (action.type) {
@@ -50,7 +50,13 @@ function Reservation() {
 
 
    return (
+    <>
+    <div className='form-header'>
+    <h1>Book A Reservation with Us!</h1>
+    <p>Join us for a delicious night for your tastebuds. Reserve your spot for a hassle free experience. We are open Mon-Fri 12:00PM to 9:00PM</p>
+    </div>
      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+     </>
    );
  }
  export default Reservation;

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text');
+
+body {
+  margin: 0;
+  font-family:'karla';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+    font-family: 'Markazi Text';
+    font-size: 60px;
+    margin: 0;
+    padding: 20px 0 0px 0;
+    text-align: center;
+    background-color: #495E57;
+    color: white;
+  }
+  
+  
+  p{
+    font-family: 'karla';
+    font-size: 14px;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  h3{
+    font-family: 'karla';
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .form{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 20%;
+    background-color: rgb(251, 251, 229);
+    width: 75%;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .form-items{
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type=text], select  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #booking-button{
+   align-items: center;
+  }
+
+  .form-header{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color:#495E57;
+    padding: 20px;
+    gap: 15%
+  
+  }

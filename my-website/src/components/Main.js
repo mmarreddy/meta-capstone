@@ -2,6 +2,8 @@ import React from 'react'
 import Cards from './Cards'
 import Button from './Button'
 import dish from "../assets/restauranfood.jpg"
+import { Link } from 'react-router-dom'
+
 const Main = () => {
   return (
     <div className='main'>
@@ -11,7 +13,9 @@ const Main = () => {
             <h1 style={{color: "#f4ce14"}}>Little Lemon</h1>
             <h2 style={{color: "#fff"}}>Chicago</h2>
             <p style={{width: "200px"}}>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+            <Link to="/reservations">
             <Button>Reserve</Button>
+            </Link>
           </div>
           <div className='main-item'>
             <img id="mainImg" src={dish} alt="Choux buns"></img>

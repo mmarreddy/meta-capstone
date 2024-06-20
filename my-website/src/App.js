@@ -11,11 +11,6 @@ function App() {
         <Route path="/reservations" element={<Reservation/>}></Route>
       </Routes>
     </Router>
-  //   <div>
-  //     <Header/>
-  //   {/* <Home/> */}
-  //   <Reservation/>
-  // </div>
   );
 }
 
