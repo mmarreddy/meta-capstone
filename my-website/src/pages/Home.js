@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
-import "../index.css"
+import "./styles/index.css";
 
 function Home() {
   return (

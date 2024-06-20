@@ -42,26 +42,33 @@ h1{
     margin: 20px 0 20px 0;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+
   }
 
   .form-items{
+    width:100%;
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
-  input[type=text], select  {
+  input[type=text], input[type=date], input[type=number], input[type=email], input[type=tel], select {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-bottom: 20px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
 
-  #booking-button{
-   align-items: center;
-  }
+
+
+#booking-button {
+  align-self: center;
+  margin: 20px auto;
+}
 
   .form-header{
     display: flex;

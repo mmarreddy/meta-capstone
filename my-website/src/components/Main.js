@@ -3,7 +3,7 @@ import Cards from './Cards'
 import Button from './Button'
 import dish from "../assets/restauranfood.jpg"
 import { Link } from 'react-router-dom'
-
+import '../pages/styles/index.css';
 const Main = () => {
   return (
     <div className='main'>

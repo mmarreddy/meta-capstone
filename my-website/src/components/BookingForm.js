@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button';
 import { useState } from 'react';
-import '../pages/Reservation.css';
+import '../pages/styles/Reservation.css';
 
 function BookingForm({availableTimes, dispatch}) {
         //state management
@@ -46,7 +46,7 @@ function BookingForm({availableTimes, dispatch}) {
                 <option value="Indoor">Indoor</option>
             </select> */}
         <label htmlFor="name">Name:</label>
-        <input type="textbox" placeholder='Name' id="name" value={name} onChange={(e) => setName(e.target.value)} required/>
+        <input type="text" placeholder='Name' id="name" value={name} onChange={(e) => setName(e.target.value)} required/>
         <label htmlFor="email">Email:</label>
         <input type="email" placeholder='email ID' id="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
         <label htmlFor="phone">Phone Number:</label>

@@ -1,6 +1,6 @@
 import React, {useEffect, useReducer} from 'react'
 import BookingForm from '../components/BookingForm';
-import './Reservation.css'
+import './styles/Reservation.css'
 
 function updateTimes(availableTimes, action, date) {
  switch (action.type) {
