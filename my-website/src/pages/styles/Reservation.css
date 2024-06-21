@@ -34,18 +34,28 @@ h1{
   
   .form{
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     justify-content: center;
     gap: 20%;
     background-color: rgb(251, 251, 229);
+    position: relative;
+    left: 150px;
     width: 75%;
     margin: 20px 0 20px 0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-
   }
 
+  .form-items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 60px;
+
+  }
+  
   .form-items{
     width:100%;
     display: flex;
@@ -54,7 +64,7 @@ h1{
   }
 
   input[type=text], input[type=date], input[type=number], input[type=email], input[type=tel], select {
-    width: 100%;
+    width: 75%;
     padding: 12px 20px;
     margin-bottom: 20px;
     display: inline-block;
@@ -64,8 +74,7 @@ h1{
   }
 
 
-
-#booking-button {
+.booking-button {
   align-self: center;
   margin: 20px auto;
 }

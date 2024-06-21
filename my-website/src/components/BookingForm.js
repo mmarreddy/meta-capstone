@@ -2,8 +2,10 @@ import React from 'react'
 import Button from './Button';
 import { useState } from 'react';
 import '../pages/styles/Reservation.css';
+import { Link } from 'react-router-dom';
+import { submitAPI } from './API';
 
-function BookingForm({availableTimes, dispatch}) {
+function BookingForm({availableTimes, dispatch, submitForm}) {
         //state management
         const [date, setDate] = useState('');
         const [time, setTime] = useState('');
@@ -13,15 +15,18 @@ function BookingForm({availableTimes, dispatch}) {
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone, setPhone] = useState('');
-        
+
+        const allData = {date, time, guests, seating, occasion, name, email, phone}
+
         const handleSubmit  = (e) => {
          e.preventDefault();
+          submitForm(allData);
         }
 
         return (
          <>
-
         <form className="form" onSubmit={handleSubmit} >
+         <div className='form-items-container'>
          <div className="form-items">
             <label htmlFor="res-date">Choose date:</label>
             <input type="date" id="res-date" value={date} onChange={(e) => {
@@ -37,14 +42,14 @@ function BookingForm({availableTimes, dispatch}) {
             </select>
             <label htmlFor="guests">Number of guests:</label>
             <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={(e) => setGuests(e.target.value)}required/>
-        </div>
-        <div className="form-items">
-        {/* <label htmlFor="seating">Seating Preference</label>
+        <label htmlFor="seating">Seating Preference</label>
         <select id="seating" value={seating} onChange={(e)=> setSeating(e.target.value)}>
                 <option value="Patio">Patio</option>
                 <option value="Bakery">Bakery</option>
                 <option value="Indoor">Indoor</option>
-            </select> */}
+         </select> 
+         </div>
+         <div className="form-items">
         <label htmlFor="name">Name:</label>
         <input type="text" placeholder='Name' id="name" value={name} onChange={(e) => setName(e.target.value)} required/>
         <label htmlFor="email">Email:</label>
@@ -58,12 +63,15 @@ function BookingForm({availableTimes, dispatch}) {
            <option>None</option>
         </select>
         </div>
+        </div>
+        <div className= "booking-button">
+       
+        <Button type="submit">Book Reservation</Button>
+        </div>
      </form>
-     <Button id="booking-button" type="submit">Book Reservation</Button>
      </>
     );
   }
-
 
   
   export default BookingForm;

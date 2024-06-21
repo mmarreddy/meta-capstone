@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 function Button (props) {
     const style = {
@@ -12,11 +12,9 @@ function Button (props) {
         fontSize: "14px",
         fontFamily: "Karla"
     }
-    const handleClick = () => {
-        //Add routes
-      }
+
     return (
-        <button onClick={handleClick} style={style}>
+        <button style={style}>
             <strong>{props.children}</strong>
         </button>
     );
