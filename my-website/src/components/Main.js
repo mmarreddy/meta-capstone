@@ -23,7 +23,9 @@ const Main = () => {
       </div>
       <div className='card-section'>
         <h1>This Weeks Specials!</h1>
+        <Link to="/menu">
         <Button>Online Menu</Button>
+        </Link>
       </div>
         <Cards/>
     </div>
