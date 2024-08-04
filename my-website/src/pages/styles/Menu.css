@@ -1,0 +1,105 @@
+/* button{
+    width: 120px;
+    background: rgb(244, 206, 20);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px #ffffffa5;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    font-family: Karla;
+}
+
+button:hover{
+    background: #495E57;
+}
+
+.button-container{
+    width: 100%;
+    background-color: #495E57;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+.menu-card{
+    background-color: #edefee;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+} */
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 10px; /* Space between the cards */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-card {
+    background-color: #edefee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px; 
+    margin: none;
+
+}
+
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    display: block; 
+
+}
+
+.menu-item-header {
+    padding: 10px;
+}
+
+.menu-item-header h3 {
+    margin: 0;
+    font-size: 14px; /* Smaller font size */
+    font-family: karla;
+}
+
+.menu-item-header p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #333;
+}
+
+button {
+    width: 120px;
+    background: rgb(244, 206, 20);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px #ffffffa5;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    font-family: Karla;
+}
+
+button:hover {
+    background: #495E57;
+}
+
+.button-container {
+    width: 100%;
+    background-color: #495E57;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+}
