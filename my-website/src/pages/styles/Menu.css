@@ -38,6 +38,8 @@ h2{
     grid-gap: 10px; /* Space between the cards */
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0% 10% 5% 10%;
+
 }
 
 .menu-card {
@@ -46,9 +48,10 @@ h2{
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 10px;
+    justify-content: center;
+    padding: 0px;
     width: 100%;
-    max-width: 250px; 
+    max-width: 100%; 
     margin: none;
 
 }
@@ -56,6 +59,7 @@ h2{
 
 .menu-card img {
     width: 100%;
+    padding: 0px;
     height: auto;
     display: block; 
 
