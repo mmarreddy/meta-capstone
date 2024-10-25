@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family:'karla';
+  font-family:'Karla';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,14 +20,14 @@ h1{
   
   
   p{
-    font-family: 'karla';
+    font-family: 'Karla';
     font-size: 14px;
     color: white;
     flex-wrap: wrap;
   }
   
   h3{
-    font-family: 'karla';
+    font-family: 'Karla';
     font-size: 14px;
     font-weight: bold;
   }
